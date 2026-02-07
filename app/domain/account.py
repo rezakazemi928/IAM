@@ -11,7 +11,7 @@ from app.domain.errors import UserIsNotActive
 class Account():
     account_id: str
     phone: str
-    role_id: int
+    role_id: str
     token_key: str
     password: Optional[str]
     status: AccountStatus
