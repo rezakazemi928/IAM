@@ -1,5 +1,5 @@
 from fastapi import APIRouter, Depends
-from app.application.usecases.register import RegisterUseCase, RegisterCommand
+from app.application.usecases.command.register import RegisterUseCase, RegisterCommand
 from app.interfaces.http.dependecies import get_register_use_case
 from app.interfaces.http.schemas.auth import RegisterClientRequest, RegisterResponse
 

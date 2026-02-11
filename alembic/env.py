@@ -5,13 +5,13 @@ from logging.config import fileConfig
 
 from sqlalchemy import pool
 from sqlalchemy.engine import Connection
-from sqlalchemy.ext.asyncio import AsyncEngine, create_async_engine
+from sqlalchemy.ext.asyncio import create_async_engine
 
 from alembic import context
 
 from app.core.config import settings
 from app.infrastructure.db.base import Base
-from app.infrastructure.db.models import account  # ensure models are imported
+from app.infrastructure.db.models import account, roles  # ensure models are imported
 
 config = context.config
 fileConfig(config.config_file_name)

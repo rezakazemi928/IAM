@@ -4,3 +4,6 @@ class UserIsNotActive(Exception):
 
 class UserExists(Exception):
     pass
+
+class RoleNotFound(Exception):
+    pass
