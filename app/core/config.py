@@ -1,3 +1,5 @@
+import os
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from dotenv import load_dotenv
 
@@ -16,6 +18,7 @@ class Settings(BaseSettings):
     JWT_SECRET: str
     JWT_ACCESS_TTL_MIN: int
     JWT_REFRESH_TTL_MIN: int
-    
+    JWT_ALGORITHM: str = os.getenv("JWT_ALGORITHM", "HS256")
+
 
 settings = Settings()
